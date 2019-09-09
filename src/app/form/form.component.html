@@ -1,0 +1,44 @@
+
+<div *ngIf="!goToView" class="container">
+      <!-- <form [formGroup]="userForm" (submit)="saveUser()">
+        <label for="name">Name</label>
+        <input formControlName="name" id="name"  />
+      
+        <label for="email">Email</label>
+        <input formControlName="email" id="email"  />
+      
+        <label for="profile">Mobile</label>
+        <input formControlName="mobile" id="profile"  />
+        <label for="profile">Address</label>
+        <input formControlName="address" id="profile"  />
+      
+        <button type="submit" [disabled]="!userForm.valid">Submit</button>
+      </form> -->
+
+<form [formGroup]="userForm" (submit)="saveUser()">
+        <div class="form-group">
+          <label for="name">Name:&nbsp;</label>
+          <input formControlName="name" id="name" />
+      
+        </div>
+        <div class="form-group">
+          <label for="email">Email:&nbsp;</label>
+          <input formControlName="email" id="email" />
+        </div>
+        <div class="form-group form-check">
+          <label for="profile">Mobile:&nbsp;</label>
+          <input formControlName="mobile" id="profile" />
+        </div>
+        <div class="form-group form-check">
+          <label for="profile">Address:&nbsp;</label>
+          <input formControlName="address" id="profile" />
+        </div>
+        <button *ngIf="!cache.name" type="submit" class="btn btn-primary">Submit</button>
+        <button (click)="update()" *ngIf="cache.name" type="submit"  class="btn btn-primary">Update</button>
+        
+      </form>
+      
+      
+      </div>
+
+<app-view-details *ngIf="goToView" ></app-view-details>

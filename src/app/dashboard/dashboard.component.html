@@ -1,0 +1,14 @@
+
+<!-- <button routerLink="/home/dasboard"></button> -->
+<div class="container">
+        <div class="jumbotron">
+        
+         <h2>CRUD DEMP APPLICATION</h2>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading"><a (click)="add()" style="color:white">ADD</a> /  <a (click)="view()" style="color:white">VIEW</a></div>
+        </div>
+      </div>
+<app-form *ngIf="isAdd"></app-form>
+
+<app-view-details *ngIf="isView"></app-view-details>

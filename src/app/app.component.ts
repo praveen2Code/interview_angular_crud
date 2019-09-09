@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crudApp';
+  hideBtn = true;
+
+  hideIt(){
+    this.hideBtn = false;
+  }
 }
